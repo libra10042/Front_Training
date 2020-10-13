@@ -1,0 +1,15 @@
+a {
+  font-weight: bold;
+  width: 100px;
+  line-height: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 6px;
+  text-align: center;
+  /* a 요소는 line 요소이므로 내가 원하는 대로 스타일링 하고 싶으면 block 요소로 변경한다. */
+  display: block;
+}
+
+a:hover {
+  background: orange;
+}

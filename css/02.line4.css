@@ -1,0 +1,17 @@
+b {
+  font-weight: normal;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+  color: brown;
+}
+
+u {
+  color: blue;
+}
+
+span {
+  text-decoration: underline;
+}
