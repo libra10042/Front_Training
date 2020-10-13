@@ -1,0 +1,66 @@
+header {
+  background: tomato;
+  margin: 10px;
+  padding: 20px;
+}
+
+header nav {
+}
+
+header nav ul {
+  display: flex; /*수평처리*/
+}
+
+header nav ul li {
+  list-style: none; /*list-style item을 사용하지 않겠다.*/
+  margin: 10px;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  width: 70%;
+  background: tomato;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+section h1 {
+}
+
+article {
+  background: yellow;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+article h2 {
+}
+
+article p {
+}
+
+aside {
+  width: 30%;
+  background: tomato;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  background: tomato;
+  margin: 10px;
+  padding: 20px;
+}
+
+footer address {
+}
+
+footer address a {
+  /*a태그는 line이다.*/
+  display: block;
+}
