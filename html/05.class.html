@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .section {
+            width : 100px; 
+            color : red;
+            background : #fff; 
+        }
+        #section {
+            width : 100px; 
+            color : blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h2 title="이 부분은 제목입니다."></h2>
+    <a href="https://google.com" title="Google.com">Google</a>
+    <div title="DIV 태그입니다.">DIV</div>
+
+
+
+    <p lang="en">This paragraph is English</p>
+    <p lang="ko">한글</p>
+
+
+
+    <!-- class는 중복이 가능함. -->
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+
+    <!-- id는 중복이 불가능.  -->
+        <div id="section"></div>
+
+
+
+
+
+
+    <script>
+
+        const section = document.querySelector(".section");
+        const sectionId = document.getElementById('.section');
+    </script>
+
+</body>
+</html>
