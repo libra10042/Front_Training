@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <progress value="30" max="100">30%</progress>
+    
+    <progress value="0.7" >70%</progress>
+
+    <script>
+        const progress = document.querySelector('progress');
+        const interval = setInterval(function() {
+            progress.value +=10;
+            if(progress.value >=100) clearInterval(interval);
+
+            if(progress.value ==100){
+                alert("완료되었습니다.");
+            }
+        }, 1000)
+
+
+    </script>
+
+
+</body>
+</html>
