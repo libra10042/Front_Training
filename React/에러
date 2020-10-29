@@ -1,0 +1,4 @@
+1) Faile to compile Error
+
+- try1. yarn start 대신  npm start 실행하기. x
+- try2. package.json에서 react-script 버전 4.0.0 ->  2.1.8으로 변경. x
