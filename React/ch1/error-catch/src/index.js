@@ -4,13 +4,12 @@ import './index.css';
 import App from './App';
 import * as Sentry from "@sentry/react";
 import reportWebVitals from './reportWebVitals';
-import ContextSample from './ContextSample';
-
 
 Sentry.init({
   dsn: "https://03cff198f1da4741b48bac7abefc092b@o469516.ingest.sentry.io/5499123",
   
 });
+
 
 ReactDOM.render(
   <React.StrictMode>
