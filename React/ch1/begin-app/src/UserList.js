@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
+import { UserDispatch } from './App';
 
-
-const User = React.memo(function User({ user, onRemove, onToggle }){
+const User = React.memo(function User({ user }){
     const { username, email, id, active } = user; //user에서 username, email, id 추출. 
+    const dispatch = useContext(UserDispatch);
     
-    useEffect(() => {
-        console.log(user);
-        return () => {
-
-        }
-    }, [user]);
+   
     
     return(
         <div>
@@ -18,13 +14,19 @@ const User = React.memo(function User({ user, onRemove, onToggle }){
                 color: active ? 'green' : 'black',
                 cursor: 'pointer' //마우스 커서를 올리면 모양이 변한다.
              }}
-             onClick={() => onToggle(id)}
+             onClick={() => dispatch({ 
+                 type : 'TOGGLE_USER',
+                 id
+                })}
             >
                 {username}
             </b>
             &nbsp;
             <span>({email})</span>
-            <button onClick={() => onRemove(id)}>삭제</button>  
+            <button onClick={() => dispatch({
+                type : 'REMOVE_USER',
+                id
+            })}>삭제</button>  
             {/*<button onClick={ => onRemove(id)}>삭제</button> */}  
             
         </div>
@@ -34,7 +36,7 @@ const User = React.memo(function User({ user, onRemove, onToggle }){
 
 
 
-function UserList( {users, onRemove, onToggle } ){
+function UserList( {users} ){
     return (    
         <div>
         {
@@ -43,8 +45,6 @@ function UserList( {users, onRemove, onToggle } ){
                  (<User
                      key={user.id}  
                      user={user}
-                     onRemove={onRemove}
-                     onToggle={onToggle}
                      />
                   )
             )
