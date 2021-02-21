@@ -1,5 +1,10 @@
 $blue: #228be6; //주석
+$gray: #495057;
+$pink: #f06595;
 
+@mixin button-color($color){
+  
+}  
 .Button {
   display: inline-flex;
   color: white;
@@ -19,5 +24,9 @@ $blue: #228be6; //주석
   }
   &:active {
     background: darken($blue, 10%);
+  }
+
+  & + & {
+    margin-left: 1rem;
   }
 }
