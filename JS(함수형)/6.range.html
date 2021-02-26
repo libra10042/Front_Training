@@ -1,6 +1,6 @@
 ## range
 
-<script>
+<scr>
 
     const add = (a, b) => a + b;
 
@@ -23,12 +23,12 @@
     log(list);
     log(reduce(add, list));
 
-</script>
+</scr>
 
 
 
 ### 느긋한 L.range
-<script>
+<scr>
     const L = {};
     L.range = function *(l){
         let i = -1;
@@ -44,7 +44,20 @@
     log(list.next());
     log(list.next());
     log(list.next());
-</script>
+</scr>
 
+
+<script>
+    function test(name, time, f){
+        console.time(name);
+        while(time--) f();
+        console.log(name);
+
+
+        test('L.range', 10, ()=> reduce(add, L.range(100000)));
+        test('range', 10, () => reduce(add, range(10000)));
+    }
+
+</script>
 
 
