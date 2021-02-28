@@ -1,0 +1,44 @@
+<script>
+    function test(name, time, f){
+        console.time(name);
+        while(time--) f();
+        console.timeEnd(name);
+    }
+
+    test('range', 10, () => reduce(add, range(1000000)));
+
+    test('L.range', 10, () => reduce(add, L.range(1000000)));
+
+    console.clear();
+</script>
+
+## take
+
+<script>
+    const take = (l, iter) => {
+        let res = [];
+        for(const a of iter){
+            res.push(a);
+            if(res.length == l) return res; 
+        }
+        return res; 
+    };
+    console.time('');
+    go(
+        range(10000),
+        take(5),
+        reduce(add),
+        log
+    );
+    console.timeEnd('');
+
+    console.time('');
+    go(
+        L.range(10000),
+        take(5),
+        reduce(add),
+        log
+    );
+    console.timeEnd('');
+
+</script>
